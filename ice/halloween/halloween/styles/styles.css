@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    --color1: rgb(80, 1, 1);
+    --color2: rgb(201, 247, 241);
+    color: var(--color2,black);
+    
+    font-family: RoadRage;
+}
+@font-face {
+  font-family: 'SuperCursed';
+  src: url(super-cursed-font/SuperCursed-E40Vz.ttf);
+  
+}
+@font-face{
+    font-family: 'RoadRage';
+    src: url(Road_rage/RoadRage-Regular.ttf);
+}
+
+img{
+    display: block;
+}
+body{
+    background-color: rgb(6, 29, 62);
+}
+header{
+    background-color: var(--color1, white);
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+}
+
+main{
+    text-align:center;
+}
+h1{
+    font-family: SuperCursed;
+    color: var(--color2,black);
+    justify-self: center;
+    padding: 10px;
+    grid-column: 1/4;
+}
+h2{
+    font-family: SuperCursed;
+    color: var(--color2,black);
+    justify-self: center;
+    padding: 10px;
+}
+img{
+    justify-self: center;
+    grid-column: 1/4;
+}
+section{
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+}
+
+
+
+footer{
+    background-color: var(--color1, white);
+}
