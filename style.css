@@ -1,22 +1,40 @@
+:root {
+  --a:#1E3A8A;
+  --aa:#98c2ec;
+  --b:#bbbb;
+  --c:#F59E0B;
+  --d:#DC2626;
+  
+}
 *{
     padding: 0px;
     margin: 0px;
     color:black;
     text-decoration: none;
+    font-family: system-ui, sans-serif;
 }
 header{
-    background-color: #a0a0a0;
-    display: flex;
+  background-color: var(--a);
+  font-family: Helvetica, sans-serif, Arial;
+  color: var(--c);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+header *{
+  color: var(--c);
+  font-weight: bold;  
+}
+
 #logo_box{
-    background-color: aquamarine;
     display: inline-block;
 }
 #logo{
     width: 100px;
 }
 nav{
-    background-color: aqua;
     display: flex;
     flex: 1;
 
@@ -35,16 +53,26 @@ main
 
 
 main {
-    background-color: #b0b0b0;
+  background-color: var(--b);
 }
 
+main h1{
+  justify-self: center;
+  padding: 10px 0px 0px 0px;
+}
+
+.container {
+    max-width: 1550px;   /* adjust to your design */
+    margin: 0 auto;
+    overflow: hidden;    /* hides overflow outside the container */
+}
 
 .slider {
   display: flex;            /* keep cards in a row */
   gap: 16px;                /* space between cards */
   overflow-x: auto;         /* allow horizontal scrolling */
   scroll-behavior: smooth;  /* smooth scrolling when scrolling via JS/buttons */
-  padding: 16px;            /* optional padding */
+  padding: 16px             /* optional padding */
 }
 
 .slider::-webkit-scrollbar {
@@ -64,11 +92,85 @@ main {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
 .card img {
-  height: 150px;
+  height: 250px;
   width: auto;
   object-fit: contain;   
   display: block;      
+}
+
+/*================*/
+
+#css_stuff,
+#fav,
+form {
+    width: fit-content;
+}
+
+
+#css_stuff{
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#fav{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#favorites{
+  background-color: var(--aa);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#vexsations{
+  background-color: var(--aa);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+
+
+
+.simple-table {
+    border-collapse: collapse;
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.simple-table th,
+.simple-table td {
+    border: 3px solid var(--a);
+    padding: 10px;
+}
+
+
+
+
+/*============*/
+#form_box{
+  background-color: var(--aa);
+  padding: 10px 0px 10px 0px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+form{
+  align-self: center;
+  justify-self: center;
+}
+
+#halloween{
+  display: block;
+  justify-self: center;
+  width: 60%;
+  padding: 10px 0px 20px 0px;
 }
 
 
@@ -78,5 +180,54 @@ footer
 
 */
 footer {
-    background-color: #a0a0a0;
+    background-color: #1E3A8A;
+}
+
+footer{
+  background-color: var(--a);
+  font-family: Helvetica, sans-serif, Arial;
+  color: var(--c);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-row: 1fr;
+    
+}
+
+footer a{
+    display: flex;
+    justify-self: center;  
+    padding: 10px;   
+    color: var(--c); 
+    font-weight: bold;      
+}
+
+footer ul{
+    display: flex;
+    justify-self: center; 
+    padding: 10px;    
+    
+    color: var(--d);
+    font-weight: bold;        
+}
+
+
+
+
+
+@media (max-width: 600px) { 
+  #css_stuff,
+  #fav,
+  form {
+      width: 100%;
+  }
+
+  #fav{
+    flex-direction: column;
+  }
+
+  #form_box{
+    background-color: var(--aa);
+    padding: 10px 10px 10px 10px;
+    margin: 10px;
+  }
 }
